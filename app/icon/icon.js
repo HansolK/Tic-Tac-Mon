@@ -33,9 +33,15 @@ const icons = {
   }
 }
 
+function getIconSource(key) {
+  return icons[key].source
+}
+
 function popUpModal(callback) {
   const modal = document.querySelector(".icon-modal")
-  modal.innerHTML = "";
+  const modalbody = document.querySelector(".icon-modal-body")
+
+  modalbody.innerHTML = "";
   modal.classList.add("icon-modal-show")
 
   const keys = Object.keys(icons)
@@ -44,19 +50,22 @@ function popUpModal(callback) {
     const icon = icons[keys[i]]
     const imageContainer = document.createElement("div")
     const image = document.createElement("img")
-    modal.appendChild(imageContainer)
+    modalbody.appendChild(imageContainer)
     imageContainer.appendChild(image)
     image.setAttribute("src", icon.source)
 
     imageContainer.addEventListener('click', function() {
-      modal.innerHTML = "";
+      modal.classList.remove("icon-modal-show")
       callback(keys[i])
     })
   }
 
 }
 
-// popUpModal(function(imageclicked) {
-// //set the game image into the player character
-// }
-// )
+
+window.popUpModal = popUpModal
+window.icons = {
+  chooseIcon: popUpModal,
+  getIconSource: getIconSource,
+}
+

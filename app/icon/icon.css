@@ -1,10 +1,30 @@
 .icon-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(99, 99, 99, 0.9);
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  display: flex;
+  visibility: hidden;
+}
+
+.icon-modal.icon-modal-show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.icon-modal-body {
   background-color: cornflowerblue;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 
-.icon-modal > div {
+.icon-modal-body > div {
   height: 100px;
   border: 1px solid rgb(39, 152, 148);
   display: flex;
@@ -12,7 +32,7 @@
   justify-content: center;
   padding: 10px;
 }
-.icon-modal > div:hover {
+.icon-modal-body > div:hover {
   cursor: pointer;
   animation: colorChange 1s infinite;
 }
@@ -31,12 +51,8 @@
   }
 }
 
-.icon-modal img {
+.icon-modal-body img {
   max-width: 100%;
   max-height: 100%;
-}
-
-.icon-modal:not(.icon-modal-show) {
-  display: none;
 }
 

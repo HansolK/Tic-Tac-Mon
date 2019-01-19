@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="app/icon/icon.css" />
-</head>
-<body>
-  <!-- this will be handled in the icon js -->
-  <div class="icon-modal"></div>
-
-
-  <div class="login-page">
-    <div>
-      <div>
-      <input type="text"><button>choose your partner</button>
-      </div>
-      <div>
-      <input type="text"><button>choose your partner</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="app/icon/icon.css" />
+    <link rel="stylesheet" href="app/login/login.css" />
+    <link rel="stylesheet" href="app/main.css" />
+  </head>
+  <body>
+    <!-- this will be handled in the icon js -->
+    <div class="icon-modal">
+      <div class="icon-modal-body"></div>
+    </div>
+    <div class="wrapper"> 
+      <h1>Let's Go Tic-Tac-Toe</h1>
+      <div class="login-page">
+        <div>
+          <div class="player">
+            <input placeholder="Player1 Name" type="text" />
+            <button>
+              choose your partner
+            </button>
+          </div>
+          <div class="player">
+            <input placeholder="Player2 Name" type="text" />
+            <button>
+              choose your partner
+            </button>
+          </div>
+          <button class="play-btn">play</button>
+        </div>
       </div>
     </div>
 
-  </div>
-
-
-
-
-
-  <script src="app/icon/icon.js"></script>
-  <script src="app.js"></script>
-</body>
+    <script src="app/icon/icon.js"></script>
+    <script src="app/login/login.js"></script>
+  </body>
 </html>

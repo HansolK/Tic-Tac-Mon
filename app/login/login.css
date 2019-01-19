@@ -1,0 +1,37 @@
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.login-page .player {
+  margin: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.login-page .player input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.login-page button {
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.login-page button:hover {
+  background-color: orange;
+}
+
+.login-page button img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.login-page .player button {
+  width: 80px;
+  height: 80px;
+}
