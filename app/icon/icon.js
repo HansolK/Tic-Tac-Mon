@@ -1,7 +1,8 @@
 const icons = {
   pikachu: {
     source: 'https://vignette.wikia.nocookie.net/poohadventures/images/a/a0/EiMArL4yT.png/revision/latest?cb=20150906014901',
-    name: "Pikachu"
+    name: "Pikachu",
+    background: "red"
   },
   charmander: {
     source: 'https://qph.fs.quoracdn.net/main-qimg-b608148d94f84b2c8a4ac7ab49ab8bb5',
@@ -38,11 +39,11 @@ function getIconSource(key) {
 }
 
 function popUpModal(callback) {
-  const modal = document.querySelector(".icon-modal")
-  const modalbody = document.querySelector(".icon-modal-body")
+  const modal = document.querySelector(".modal--icon")
+  const modalbody = modal.querySelector(".modal-body")
 
   modalbody.innerHTML = "";
-  modal.classList.add("icon-modal-show")
+  modal.classList.add("modal-show")
 
   const keys = Object.keys(icons)
   
@@ -55,7 +56,7 @@ function popUpModal(callback) {
     image.setAttribute("src", icon.source)
 
     imageContainer.addEventListener('click', function() {
-      modal.classList.remove("icon-modal-show")
+      modal.classList.remove("modal-show")
       callback(keys[i])
     })
   }

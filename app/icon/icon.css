@@ -1,4 +1,4 @@
-.icon-modal {
+.modal {
   position: absolute;
   top: 0;
   left: 0;
@@ -13,18 +13,18 @@
   visibility: hidden;
 }
 
-.icon-modal.icon-modal-show {
+.modal-show {
   visibility: visible;
   opacity: 1;
 }
 
-.icon-modal-body {
+.modal--icon .modal-body {
   background-color: cornflowerblue;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 
-.icon-modal-body > div {
+.modal--icon .modal-body > div {
   height: 100px;
   border: 1px solid rgb(39, 152, 148);
   display: flex;
@@ -32,7 +32,7 @@
   justify-content: center;
   padding: 10px;
 }
-.icon-modal-body > div:hover {
+.model--icon .modal-body > div:hover {
   cursor: pointer;
   animation: colorChange 1s infinite;
 }
@@ -51,8 +51,12 @@
   }
 }
 
-.icon-modal-body img {
+.modal--icon .modal-body img {
   max-width: 100%;
   max-height: 100%;
 }
 
+.modal--winner .modal-body {
+  font-size: 40px;
+  color: tomato;
+}

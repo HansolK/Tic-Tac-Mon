@@ -1,16 +1,73 @@
 body{
   margin: 0;
+  font-family: 'Black Ops One', cursive;
 }
 
 .wrapper {
+  display: flex;
+  justify-content: center;
   width: 80%;
   height: 100vh;
   margin: 0 auto;
-  background-color: darkturquoise;
+  background: linear-gradient(#eeaeca, #94bbe9);
   overflow: auto;
+  align-items: center;
 }
 
 h1 {
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: #109f7d
 }
 
+.game-page {
+  display: flex;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-page.game-page-show {
+  visibility: visible;
+}
+
+.display-div {
+  text-align: center;
+  margin: 0 10px;
+}
+
+
+table {
+  margin: 0 10px;
+
+}
+table, td, tr {
+  border-collapse: collapse;
+  border: 1px black solid;
+}
+
+td {
+  width: 90px;
+  height: 90px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.player-image {
+  width: 80px;
+  height: 80px;
+  margin-right: 0;
+}
+
+.cell-image {
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: contain;
+}
+td:hover {
+  background-color: steelblue
+}
